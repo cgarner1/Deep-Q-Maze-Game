@@ -1,8 +1,8 @@
-#Deep Q Network Maze Game
+# Deep Q Network Maze Game
 
 This project is designed to have a player agent teach itself to reach a goal using the deep reinforcment learning algorithm "Deep Q Networks" (DQN).
 
-#Description
+# Description
 
 ![demo of test.py running](./Results/Successful_DQN_Run.gif)
 
@@ -16,7 +16,7 @@ The game and how it interacts with the DQN model is structured according to what
 Analytics from succesful runs are provided under the "Results" directory.
 
 
-#Basic Usage
+# Basic Usage
 
 Creating a game environment is as simple as defining a new Environment object with a given player velocity, a screen size set (heavily suggested you use 500 by 500 size), and stage number (zero or one). You will also need to define your reinforcment learning model of choice, in this example, labeled "agent."
 
@@ -72,7 +72,7 @@ if len(agent.memory) > batch_size:
 ```
 If you would like to replace the DQN with your own fancy nueral network/reinforncment learning hybrid child of your own, the Deep-Q Environment class can just be called into a seperate project without much difficulty. Just import the class, follow the five steps (while maybe referring to "test.py" from lines 116 down), and get rolling. In retrospect, naming the python file "Game" was problably... not terribly thoughtful. 20/20 Hindsight and all, right? Then again, writing this document seven months later it kind of stands as a relic to my own naivete at the time of building the project. I kind of love it to be honest. The name is staying. That's final.
 
-#How Does it Work??
+# How Does it Work??
 
 Ok, lets get technical.
 
