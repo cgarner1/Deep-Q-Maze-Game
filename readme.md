@@ -4,7 +4,7 @@ This project is designed to have a player agent teach itself to reach a goal usi
 
 # Description
 
-![demo of test.py running](./Results/Successful_DQN_Run.gif)
+![demo of test.py running](./Results/Videos/Successful_DQN_Run.gif)
 
 This project was my first attempt at building a DQN in Python using the Tensorflow Keras API, Numpy, and PyGame. *These three dependencies must be installed before running either file.* The goal of the project was for a player agent (in blue) to learn to navigate a playspace without hitting any walls (in red). The player's final goal is to reach the goal cube at the end of the level (orange). The DQN works off of a rather straightforward reward system. The closer the player agent moves toward the goal the higher reward it attains, the further away the larger penalty. Passing certain checkpoints results in a much larger reward than avialable from moving towards the goal. This is a rather high level explination of how the model is trained, and a more detailed summary is included in the "How Does it Work?" section.
 
