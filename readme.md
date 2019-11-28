@@ -70,9 +70,9 @@ state = next_state
 if len(agent.memory) > batch_size:
 	agent.replay(batch_size)
 ```
-If you would like to replace the DQN with your own fancy nueral network/reinforncment learning hybrid child of your own, the Deep-Q Environment class can just be called into a seperate project without much difficulty. Just import the class, follow the five steps (while maybe referring to "test.py" from lines 116 down), and get rolling. In retrospect, naming the python file "Game" was problably... not terribly thoughtful. 20/20 Hindsight and all, right? Then again, writing this document seven months later it kind of stands as a relic to my own naivete at the time of building the project. I kind of love it to be honest. The name is staying. That's final.
+If you would like to replace the DQN with your own fancy nueral network/reinforncment learning hybrid of your own, the Deep-Q Environment class can just be called into a seperate project without much difficulty. Just import the class, follow the five steps (while maybe referring to "test.py" from lines 116 down), and get rolling. In retrospect, naming the python file "Game" was problably... not terribly thoughtful. 20/20 Hindsight and all, right?
 
 # How Does it Work??
 
-Ok, lets get technical.
+TODO
 
