@@ -6,7 +6,7 @@ This project is designed to have a player agent teach itself to reach a goal usi
 
 ![demo of test.py running](./Results/Videos/Successful_DQN_Run.gif)
 
-This project was my first attempt at building a DQN in Python using the Tensorflow Keras API, Numpy, and PyGame. *These three dependencies must be installed before running either file.* The goal of the project was for a player agent (in blue) to learn to navigate a playspace without hitting any walls (in red). The player's final goal is to reach the goal cube at the end of the level (orange). The DQN works off of a rather straightforward reward system. The closer the player agent moves toward the goal the higher reward it attains, the further away the larger penalty. Passing certain checkpoints results in a much larger reward than avialable from moving towards the goal. This is a rather high level explination of how the model is trained, and a more detailed summary is included in the "How Does it Work?" section.
+This project was my first attempt at building a DQN in Python using the Tensorflow Keras API, Numpy, and PyGame. *These three dependencies must be installed before running either file.* The goal of the project was for a player agent (in blue) to learn to navigate a playspace without hitting any walls (in red). The player's final goal is to reach the goal cube at the end of the level (orange). The DQN works off of a rather straightforward reward system. The closer the player agent moves toward the goal the higher reward it attains, the further away the larger penalty. Passing certain checkpoints results in a much larger reward than avialable from moving towards the goal. This is a rather high level explination of how the model is trained, but the main idea is that Nueral Network is being used to estimate the most efficient move to make (that move is called Q Prime) given a game state and pool of actions.
 
 
 The Deep Q Network is based off of Jon Krohn's "Deep Q Learning Networks" video, linked here: https://youtu.be/OYhFoMySoVs
@@ -18,7 +18,7 @@ Analytics from succesful runs are provided under the "Results" directory.
 
 # Basic Usage
 
-Creating a game environment is as simple as defining a new Environment object with a given player velocity, a screen size set (heavily suggested you use 500 by 500 size), and stage number (zero or one). You will also need to define your reinforcment learning model of choice, in this example, labeled "agent."
+Creating a game environment is as simple as defining a new Environment object with a given player velocity, a screen size set (heavily suggested you use 500 by 500 size), and stage number (zero or one). You will also need to define your reinforcement learning model of choice, in this example, labeled "agent."
 
 ```python
 import Game
@@ -35,7 +35,7 @@ game.show()
 ```
 
 
-2. Have model choose either a random action or a learned action based on agent's epsilon value (more information in "How Does it Work?" section)
+2. Have model choose either a random action or a learned action based on agent's epsilon value (epsiolon is the probability of the agent to take a random action to gain new knowledge, or to attempt to use the Nueral Net to attempt the bets possible move)
 ```python
 action = agent.act(state)
 ```
@@ -70,9 +70,5 @@ state = next_state
 if len(agent.memory) > batch_size:
 	agent.replay(batch_size)
 ```
-If you would like to replace the DQN with your own fancy nueral network/reinforncment learning hybrid of your own, the Deep-Q Environment class can just be called into a seperate project without much difficulty. Just import the class, follow the five steps (while maybe referring to "test.py" from lines 116 down), and get rolling. In retrospect, naming the python file "Game" was problably... not terribly thoughtful. 20/20 Hindsight and all, right?
-
-# How Does it Work??
-
-TODO
+If you would like to replace the DQN with your own fancy nueral network/reinforncment learning hybrid whatever of your own, the Deep-Q Environment class can just be called into a seperate project without much difficulty. Just import the class, follow the five steps (while maybe referring to "test.py" from lines 116 down), and get rolling. In retrospect, naming the python file "Game" was problably... not terribly thoughtful. 20/20 Hindsight and all, right?
 
